@@ -44,17 +44,19 @@ var select = function(){
   window.alert("Choose Password Criteria");
 
   var num = window.prompt("Select a password between 8 and 128 characters");
-  for (num = 0; num >= 8 || num <=128;){
-    window.prompt("Select Upercase, Lowercase, and at least one Special Character");
+  if (num === "" || num > 128 || num < 8){
+    window.alert("Must select from range");
+  }
+  else{
+    choose();
   }
 
-  
-  
+}
+
+var choose = function (){
+  var pass = window.prompt("Choose from Uppercase, lowercase, or special characters");
   
 
-  //call function to check if inputs are correct here
-
-  //generate new password
 }
 
 
