@@ -42,7 +42,7 @@ function generatePassword() {
 
   
 //chooses criteria for password in prompt
-  var pass = window.prompt("Choose from Uppercase, lowercase, or special characters");
+  var pass = window.prompt("Choose from Uppercase, lowercase, numeric, or special characters");
   var specialCharBool = false;
   var upperCaseBool = false;
   var lowerCaseBool = false;
@@ -69,15 +69,73 @@ function generatePassword() {
   var finalPass = "";
   //var currentChar 
 
-while(upperCaseBool, specialCharBool, numericBool, lowerCaseBool){
-
-
   for (i = 0; i < num; i ++){
+
+    if(upperCaseBool === true && lowerCaseBool === true && specialCharBool === true && numericBool === true){
     finalPass += specialChar[Math.floor(Math.random() * specialChar.length)]
     finalPass += upperCase[Math.floor(Math.random () * upperCase.length)]
-    //finalPass += lowerCase[Math.floor(Math.random() * lowerCase.length)]
-    //finalPass += randomNum[Math.floor(Math.random() * randomNum.length)]
-    
+    finalPass += lowerCase[Math.floor(Math.random() * lowerCase.length)]
+    finalPass += randomNum[Math.floor(Math.random() * randomNum.length)]
+  }
+
+  //if one is false
+  else if(upperCaseBool === true && lowerCaseBool === true && specialCharBool === true && numericBool === false){
+    finalPass += specialChar[Math.floor(Math.random() * specialChar.length)]
+    finalPass += upperCase[Math.floor(Math.random () * upperCase.length)]
+    finalPass += lowerCase[Math.floor(Math.random() * lowerCase.length)]
+  }
+  else if (upperCaseBool === true && lowerCaseBool === true && numericBool === true && specialCharBool === false){
+    finalPass += upperCase[Math.floor(Math.random () * upperCase.length)]
+    finalPass += lowerCase[Math.floor(Math.random() * lowerCase.length)]
+    finalPass += randomNum[Math.floor(Math.random() * randomNum.length)]
+  }
+  else if (upperCaseBool === true && lowerCaseBool === false && specialCharBool === true && numericBool === true){
+    finalPass += specialChar[Math.floor(Math.random() * specialChar.length)]
+    finalPass += upperCase[Math.floor(Math.random () * upperCase.length)]
+    finalPass += randomNum[Math.floor(Math.random() * randomNum.length)]
+  }
+  else if (upperCaseBool === false && lowerCaseBool === true && specialCharBool === true && numericBool === true) {
+    finalPass += specialChar[Math.floor(Math.random() * specialChar.length)]
+    finalPass += lowerCase[Math.floor(Math.random() * lowerCase.length)]
+    finalPass += randomNum[Math.floor(Math.random() * randomNum.length)]
+  }
+
+  //if two are false
+  else if (upperCaseBool === false && lowerCaseBool === false && specialCharBool === true && numericBool === true){
+    finalPass += randomNum[Math.floor(Math.random() * randomNum.length)]
+    finalPass += specialChar[Math.floor(Math.random() * specialChar.length)]
+  }
+  else if (upperCaseBool === true && lowerCaseBool === true && specialCharBool === false && numericBool === false){
+    finalPass += upperCase[Math.floor(Math.random () * upperCase.length)]
+    finalPass += lowerCase[Math.floor(Math.random() * lowerCase.length)]
+  }
+  else if (upperCaseBool === true && lowerCaseBool === false && specialCharBool === true && numericBool === false){
+    finalPass += upperCase[Math.floor(Math.random () * upperCase.length)]
+    finalPass += specialChar[Math.floor(Math.random() * specialChar.length)]
+  }
+  else if (upperCaseBool === false && lowerCaseBool === true && specialCharBool === false && numericBool === true){
+    finalPass += lowerCase[Math.floor(Math.random() * lowerCase.length)]
+    finalPass += randomNum[Math.floor(Math.random() * randomNum.length)]
+  }
+
+  //if one is true
+  else if (upperCaseBool === false && lowerCaseBool === false && specialCharBool === false && numericBool === true){
+    finalPass += randomNum[Math.floor(Math.random() * randomNum.length)]
+  }
+  else if (upperCaseBool === false && lowerCaseBool === false && specialCharBool === true && numericBool === false){
+    finalPass += specialChar[Math.floor(Math.random() * specialChar.length)]
+  }
+  else if (upperCaseBool === false && lowerCaseBool === true && specialCharBool === false && numericBool === false){
+    finalPass += lowerCase[Math.floor(Math.random() * lowerCase.length)]
+  }
+  else if(upperCaseBool === true && lowerCaseBool === false && specialCharBool === false && numericBool === false){
+    finalPass += upperCase[Math.floor(Math.random () * upperCase.length)]
+  }
+
+  //if all are false
+  else if(upperCaseBool === false && lowerCaseBool === false && specialCharBool === false && numericBool === false){
+    window.alert("You have selected none. A password will not be genrated");
+    break;
   }
 }
 
