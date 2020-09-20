@@ -46,6 +46,7 @@ function generatePassword() {
   var specialCharBool = false;
   var upperCaseBool = false;
   var lowerCaseBool = false;
+  var numericBool = false;
 
 
  pass = pass.toLowerCase();
@@ -58,6 +59,9 @@ function generatePassword() {
   if (pass.includes("special characters")){
     specialCharBool = true;  
   } 
+  if (pass.includes ("numeric")) {
+    numericBool = true;
+  }
   
   
  
@@ -65,13 +69,26 @@ function generatePassword() {
   var finalPass = "";
   //var currentChar 
 
+while(upperCaseBool, specialCharBool, numericBool, lowerCaseBool){
+
+
   for (i = 0; i < num; i ++){
+    finalPass += specialChar[Math.floor(Math.random() * specialChar.length)]
+    finalPass += upperCase[Math.floor(Math.random () * upperCase.length)]
+    //finalPass += lowerCase[Math.floor(Math.random() * lowerCase.length)]
+    //finalPass += randomNum[Math.floor(Math.random() * randomNum.length)]
+    
+  }
+}
+
+  /*for (i = 0; i < num; i ++){
+    while (upperCaseBool === true)
     finalPass += specialChar[Math.floor(Math.random() * specialChar.length)]
     finalPass += upperCase[Math.floor(Math.random () * upperCase.length)]
     finalPass += lowerCase[Math.floor(Math.random() * lowerCase.length)]
     finalPass += randomNum[Math.floor(Math.random() * randomNum.length)]
     
-  }
+  }*/
 
   //displays finalPass*/
   
