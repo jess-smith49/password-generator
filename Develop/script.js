@@ -151,6 +151,7 @@ function generatePassword() {
   //displays finalPass*/
   
   console.log(finalPass);
+  window.alert(finalPass);
 
   
 }
