@@ -31,6 +31,7 @@ For the assignment I had to generate a password based on specific user inputs an
 The main technology used was javascript, and focusing on functionality. I also used github and the computer terminal to assist in version control and creation/deletion. 
 
 Screenshot of application: 
-![](passwordgenerator.png)
+![screenshot](/assets/passwordgenerator.png)
 
 Link to deployed application:
+https://jess-smith49.github.io/password-generator/
